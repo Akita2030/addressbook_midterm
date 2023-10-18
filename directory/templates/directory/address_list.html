@@ -1,0 +1,31 @@
+{% extends 'directory/base.html' %}
+
+
+{% block content %}
+
+<header class="page-header">
+    <div class="container">
+        <h1><a href="/">AddressBook</a></h1>
+    </div>
+</header>
+
+    <main class="container">
+               
+                {% for addressbook in object_list %}
+                    <article class="post">
+                        <h2><a href="{% url 'address_detail' pk=post.pk %}">{{ addressbook.first_name }} {{ addressbook.second_name }}</a></h2>
+                        <time class="date">
+                            Was born: {{ addressbook.birth_date }}
+                            
+                        </time>
+                        
+                    </article>
+                {% endfor %}
+                
+           
+    </main>
+    
+    
+
+    
+{% endblock %}

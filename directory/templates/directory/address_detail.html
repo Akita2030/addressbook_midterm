@@ -1,0 +1,14 @@
+{% extends "directory/base.html" %}
+{% block content %}
+<header class="page-header">
+    <div class="container">
+        <h1><a href="/">AddressBook</a></h1>
+    </div>
+</header>
+  <article class="post">
+    <h2>{{ object.first_name }} | {{ object.second_name }} | {{ object.surname_name }}</h2>
+    <p>{{ object.phone_number }} | {{ object.email }}</p>
+    <p>{{ object.birth_date }}</p>
+  </article>
+  {% endif %}
+{% endblock %}
